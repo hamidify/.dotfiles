@@ -1,0 +1,10 @@
+# Default GitHub
+ Host git-p
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa
+
+ Host git-w
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/git_cevoid
