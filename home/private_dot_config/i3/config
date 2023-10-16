@@ -187,7 +187,7 @@ bindsym Control+Mod1+l exec "i3lock -c 000000"
 
 # auto lock the screen
 
-exec xautolock -detectsleep -time 1 -locker "$HOME/.config/i3/scripts/lock" \
+exec xautolock -detectsleep -time 10 -locker "$HOME/.config/i3/scripts/lock" \
   -notify 30 \
   -notifier "notify-send -u critical -t 10000 -- 'locking screen in 30 seconds'"
 
