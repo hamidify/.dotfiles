@@ -204,13 +204,21 @@ exec --no-startup-id i3-msg 'workspace 1; exec gnome-terminal;'
 exec --no-startup-id i3-msg 'workspace 2; exec gnome-terminal;'
 exec --no-startup-id i3-msg 'workspace 3; exec google-chrome;'
 exec --no-startup-id i3-msg 'workspace 4; exec mongodb-compass;'
-exec --no-startup-id i3-msg 'workspace 5; exec google-chrome;'
-workspace "1" output DP-4
 workspace "1" output DP-4
 workspace "2" output DP-4
 workspace "3" output DP-4
-workspace "4" output eDP-1-1
+workspace "4" output DP-4
+workspace "5" output eDP-1-1
 
+## Screenshots
+bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
+bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
+bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
+
+## Clipboard Screenshots
+bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 bindsym $mod+F1 exec --no-startup-id ~/.config/i3/scripts/setup
 
 # Suspend

@@ -25,13 +25,13 @@ M.general = {
       "<cmd>lua require('harpoon.mark').add_file()<CR>",
       "Add harpoon mark",
     },
-    ["<leader>k"] = {
+    ["<C-k>"] = {
       "<cmd>lua require('harpoon.ui').nav_next()<CR>",
-      "List harpoon marks",
+      "Next harpoon mark",
     },
-    ["<leader>s"] = {
+    ["<C-l>"] = {
       "<cmd>lua require('harpoon.ui').nav_prev()<CR>",
-      "List harpoon marks",
+      "Prev harpoon mark",
     },
     ["<leader>ml"] = {
       "<cmd>Telescope harpoon marks<CR>",
