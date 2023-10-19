@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 xset r rate 220 90
-xrandr --output HDMI-0 --primary
-xrandr --output HDMI-0 --auto --left-of eDP-1-1
-sudo service usbmuxd restart
-pkill barrier || true && barrier &
-pkill indicator-sound-switcher || true && indicator-sound-switcher & 
-pkill droidcam || true && droidcam &
+xrandr --output DP-4 --primary
+xrandr --output DP-4 --left-of eDP-1-1
+# sudo service usbmuxd restart
+# pkill barrier || true && barrier &
+# pkill indicator-sound-switcher || true && indicator-sound-switcher &
+# pkill droidcam || true && droidcam &
 pkill clipit || true && clipit &
